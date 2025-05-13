@@ -2,4 +2,4 @@
 - name: compose-up
   command: docker-compose up -d
   args:
-    chdir: /Users/whoami/Documents/testing #необходимо указать путь к папке с docker-compose.yaml
+    chdir: /Users/whoami/Documents/testing #необходимо указать путь к директории с docker-compose.yaml
