@@ -1,0 +1,14 @@
+---
+
+- name: Deploy containers with Docker Compose
+  hosts: localhost
+  connection: local
+
+  roles:
+  - role: docker-compose-up 
+
+
+
+
+
+  
