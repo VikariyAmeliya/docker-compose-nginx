@@ -1,0 +1,25 @@
+version: "3.9" 
+
+services:
+  nginx:
+    image: nginx:stable # используем стабильную версию nginx
+    container_name: nginx-proxy
+    ports:
+      - "8080:80" #проброс порта 80 контейнера на порт 8080 хоста
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf # подключаем конфиг nginx в основной контейнер
+    depends_on:
+      - container2
+      - container3
+
+  container2:
+    image: nginx:stable
+    container_name: container2
+    volumes:
+      - ./html/index.html:/usr/share/nginx/html/index.html # подключаем файл index.html в контейнер 2
+
+  container3:
+    image: nginx:stable
+    container_name: container3
+    volumes:
+      - ./html/index1.html:/usr/share/nginx/html/index1.html # подключаем файл index1.html в контейнер 3
