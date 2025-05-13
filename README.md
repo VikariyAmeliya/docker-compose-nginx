@@ -54,7 +54,7 @@ docker stop container2
 
 docker-compose down
 
-### 3. Описание docker-compose.yaml:
+### 3. Описание docker-compose.yaml и nginx.conf:
 
 Запускает 3 сервиса (proxy + 2 бэкенда)
 
